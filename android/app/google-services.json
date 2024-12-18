@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "228026178948",
+    "project_id": "mini-bloc",
+    "storage_bucket": "mini-bloc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:228026178948:android:6db676315e50d4d66751d1",
+        "android_client_info": {
+          "package_name": "com.example.miniBloc"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzpOR-R_AjZenBBpXVS6NcI8-w9QQ6PLU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:228026178948:android:061a00d667a41a7a6751d1",
+        "android_client_info": {
+          "package_name": "com.example.mini_bloc_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzpOR-R_AjZenBBpXVS6NcI8-w9QQ6PLU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
