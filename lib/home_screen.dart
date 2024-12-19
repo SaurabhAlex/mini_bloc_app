@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:mini_bloc_app/cubit/auth_cubit.dart';
+import 'package:mini_bloc_app/cubit/auth_state.dart';
 import 'login/login_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -21,13 +24,22 @@ class _HomeScreenState extends State<HomeScreen> {
         backgroundColor: Colors.blue,
         iconTheme: IconThemeData(color: Colors.white),
         actions: [
-          IconButton(
-              onPressed: () {
-                Navigator.popUntil(context, (route) => route.isFirst);
-                Navigator.pushReplacement(context,
-                    MaterialPageRoute(builder: (context) => LoginScreen()));
+          BlocConsumer<AuthCubit, AuthState>(
+              listener: (context, state){
+                if(state is AuthLogOutState){
+                  Navigator.popUntil(context, (route) => route.isFirst);
+                  Navigator.pushReplacement(context,
+                      MaterialPageRoute(builder: (context) => LoginScreen()));
+                }
               },
-              icon: Icon(Icons.logout))
+            builder: (context, state){
+                return  IconButton(
+                    onPressed: () {
+                     BlocProvider.of<AuthCubit>(context).logOut();
+                    },
+                    icon: Icon(Icons.logout));
+            }, ),
+
         ],
       ),
       body: Center(
