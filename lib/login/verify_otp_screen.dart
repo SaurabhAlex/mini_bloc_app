@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mini_bloc_app/cubit/auth_state.dart';
 import '../cubit/auth_cubit.dart';
-import '../home_screen.dart';
+import 'dashboard.dart';
 
 class VerifyOtpScreen extends StatefulWidget {
   const VerifyOtpScreen({super.key});
@@ -32,7 +32,7 @@ class _VerifyOtpScreenState extends State<VerifyOtpScreen> {
               if (state is AuthLoggedInState) {
                 Navigator.popUntil(context, (route) => route.isFirst);
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => HomeScreen()));
+                    MaterialPageRoute(builder: (context) => Dashboard()));
               } else if (state is AuthErrorState) {
                 ScaffoldMessenger.of(context)
                     .showSnackBar(SnackBar(content: Text(state.error)));

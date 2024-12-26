@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mini_bloc_app/cubit/auth_cubit.dart';
 import 'package:mini_bloc_app/cubit/auth_state.dart';
-import '../verify_otp_screen.dart';
+import 'package:mini_bloc_app/login/verify_otp_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
